@@ -1,5 +1,4 @@
- var script = document.createElement('script'); 
-            
+           
             
             know = {
                 
@@ -35,11 +34,22 @@
                 var user = document.getElementById("userBox").value;
                  var res = user.toUpperCase();
                 document.getElementById("userBox").value = "";
-                document.getElementById("chatLog").innerHTML = "";
+                // document.getElementById("chatLog").innerHTML = "";
                 // document.getElementById("chatLog").innerHTML += user+"<br>";
                 if (res in know) {
                     document.getElementById("chatLog").innerHTML += know[res]+"<br>";
+
+                    var msg = new SpeechSynthesisUtterance();
+                    msg.text =  know[res] ;
+                    window.speechSynthesis.speak(msg);
+
                 } else {
                     document.getElementById("chatLog").innerHTML += "I don't understand...<br>";
+
+                    
+                    var msg = new SpeechSynthesisUtterance();
+                    msg.text =  "I don't understand what are you saying ?" ;
+                    window.speechSynthesis.speak(msg);
+
                 }
             } 
