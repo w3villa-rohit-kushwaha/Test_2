@@ -34,8 +34,7 @@
                 var user = document.getElementById("userBox").value;
                  var res = user.toUpperCase();
                 document.getElementById("userBox").value = "";
-                // document.getElementById("chatLog").innerHTML = "";
-                // document.getElementById("chatLog").innerHTML += user+"<br>";
+                 document.getElementById("chatLog").innerHTML = "";
                 if (res in know) {
                     document.getElementById("chatLog").innerHTML += know[res]+"<br>";
 
