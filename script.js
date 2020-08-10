@@ -4,7 +4,7 @@
                 
                 "HI" : "HELLO",
                 "HELLO" : " HI :)",
-                "HOW ARE YOU" : "I AM FINE WHAT ABOUT YOU?", 
+                "HOWAREYOU" : "I AM FINE WHAT ABOUT YOU?", 
                 "I AM ALSO FINE" : "great",
                 "WHAT ARE YOU DOING" : "I 'VE BEEN WORKING ON A FEW POEMS .BUT THEY'RE STILL PRETTY ROUGH.",
                 "TELL ME A RIDDLE" : "WHAT TWO DAYS START WITH T [OTHER THAN TUESDAY OR THURSDAY]?",
@@ -33,7 +33,7 @@
             function talk() { 
                 var user = document.getElementById("userBox").value;
                  var res = user.toUpperCase();
-                 res = res.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+                 res = res.replace(/[^\w]/g, '');
                 document.getElementById("userBox").value = "";
                  document.getElementById("chatLog").innerHTML = "";
                 if (res in know) {
