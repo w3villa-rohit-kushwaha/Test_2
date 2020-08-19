@@ -42,8 +42,8 @@
     </style>
     </head>
     <body>
-            <div><p id="chatLog">- - HELLO - -<br></p></div>
-            <div><img src ="bot.png"  id="img"></div>
+            <div><p id="chatLog">Hi, I am Angela feel free to ask me anything<br></p></div>
+            <div><img src ="bot2.png"  id="img"></div>
            
         
         <div id="block2">
@@ -52,4 +52,9 @@
        
         
     </body>
+    <script>
+                    var msg = new SpeechSynthesisUtterance();
+                    msg.text =  "Hi, I am Angela feel free to ask me anything" ;
+                    window.speechSynthesis.speak(msg);
+    </script>
 </html>
