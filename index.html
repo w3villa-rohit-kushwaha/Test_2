@@ -6,28 +6,26 @@
     <style>
     
     
-     body{
-        background-color:  DodgerBlue;
-        position: ;
-
-     }
      
-        #chatLog{
-             position: sticky;
-            font-size: 30px;
-            color: white;
-            padding-top: 20px;
-            margin-left: 30px;
-            
-            
-
+      body{
+          margin: 0;
+          text-align: center;
+          font-family: 'Merriweather', serif;
+          background-color: black;
+      }
+        
+        p{
+          font-size: 30px;
+          color: white;
         }
+     
+     
         #img{
-            height: 220px; 
-            margin-left: 50px;
+             height: 250px;
+             width: 250px;
         }
         #userBox {
-          width: 100%;
+          width: 80%;
           height: 70px;
           color: white;
           font-size: 20px;
@@ -36,17 +34,21 @@
           box-sizing: border-box;
                 }
           #userBox:focus {
-          background-color: #243236;
+          background-color: #243236; 
+
           }      
 
     </style>
     </head>
     <body>
-            <div><p id="chatLog">Hi, I am Angela feel free to ask me anything<br></p></div>
-            <div><img src ="bot2.png"  id="img"></div>
+            <div class="top-container">
+              <p id="chat">Hi, I am Cortana <br></p>
+               <img src ="https://i.pinimg.com/originals/e4/76/64/e4766420ac96065fc4882dbb65cffee8.jpg"  id="img">
+           
+            </div>
            
         
-        <div id="block2">
+        <div id="bottom-container">
         <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
         </div>
        
@@ -54,7 +56,7 @@
     </body>
     <script>
                     var msg = new SpeechSynthesisUtterance();
-                    msg.text =  "Hi, I am Angela feel free to ask me anything" ;
+                    msg.text =  "Hi, I am Cortana " ;
                     window.speechSynthesis.speak(msg);
     </script>
 </html>
