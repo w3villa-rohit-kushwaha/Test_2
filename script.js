@@ -77,4 +77,4 @@
                     window.speechSynthesis.speak(msg);
 
                 }
-            } s
+            } 
